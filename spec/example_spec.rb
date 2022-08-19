@@ -2,6 +2,22 @@
 
 require 'spec_helper'
 
+begin
+  require "bundler/inline"
+rescue LoadError => e
+  $stderr.puts "Bundler version 1.10 or later is required. Please update your Bundler"
+  raise e
+end
+
+gemfile(true) do
+  source "https://rubygems.org"
+
+  gem "rspec", "3.11.0"
+end
+
+puts "Ruby version is: #{RUBY_VERSION}"
+require 'rspec/autorun'
+
 RSpec.describe 'Metadata leak example spec' do
   describe 'nested describe', :headers => { :top => 'create hash here' } do
     before do |example|
