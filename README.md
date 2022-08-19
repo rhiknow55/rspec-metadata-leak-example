@@ -26,6 +26,9 @@ Although the quote discusses lets, it applies for any usage of metadata.
 ***
 
 I've written up a simple spec that demonstrates this problem. You can find it under `spec/example_spec.rb` (and `spec/example_spec_two.rb`), but I will also describe some points here.
+
+Run it simply with `rspec spec/example_spec.rb` from the root directory.
+
 I recommend reading the below steps alongside the example spec.
 
 ## Repro Steps
